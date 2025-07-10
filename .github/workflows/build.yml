@@ -25,7 +25,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: bsmeding/gitea-act-runner-ansible:latest
+          repository: bsmeding/gitea-act-runner-ansible
           readme-filepath: ./README.md
           short-description: "Gitea runner container with Ansible"
 
