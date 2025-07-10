@@ -20,15 +20,6 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Update Docker Hub README
-        uses: peter-evans/dockerhub-description@v3
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: bsmeding/gitea-act-runner-ansible
-          readme-filepath: ./README.md
-          short-description: "Gitea runner container with Ansible"
-
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
@@ -38,3 +29,12 @@ jobs:
           context: .
           push: true
           tags: bsmeding/gitea-act-runner-ansible:latest
+
+      - name: Update Docker Hub README
+        uses: peter-evans/dockerhub-description@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          repository: bsmeding/gitea-act-runner-ansible
+          readme-filepath: ./README.md
+          short-description: "Gitea runner container with Ansible"
