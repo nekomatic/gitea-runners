@@ -95,4 +95,4 @@ docker run bsmeding/gitea_runner
 
 ## 🧑‍💻 Author
 
-Maintained by **you@example.com**. Based on `gitea/act_runner`.
+Maintained by **https://netdevops.it**. Based on `gitea/act_runner`.
